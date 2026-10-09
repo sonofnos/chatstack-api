@@ -2,6 +2,8 @@
 
 A Node.js/TypeScript chatbot backend: Express REST API, Socket.IO streaming, PostgreSQL with pgvector for retrieval-augmented generation. Built around the exact combination a target job posting named (Node.js + OpenAI integration + WebSockets + conversation history + RAG), not a generic "hello world" chatbot.
 
+Live: [chatstack-api-f3dg.onrender.com](https://chatstack-api-f3dg.onrender.com/healthz) (REST + WebSocket, running on the deterministic fake AI backend since no API key is configured on the free deployment)
+
 ## What it does
 
 - **Streaming chat over WebSocket.** `send-message` saves the user's message, retrieves relevant document chunks, streams the model's response token by token over `token` events, then persists the full response and emits `message-complete`.
